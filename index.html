@@ -4,49 +4,89 @@
   <meta charset="UTF-8" />
   <title>Educação no/do Campo</title>
 
-  <!-- Fonte -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css">
 
-  <!-- Estilo -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #0b132b;
+    }
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+    section {
+      font-size: 28px;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="slides">
+  <div class="reveal">
+    <div class="slides">
 
-    <section class="slide active">
-      <h1>Educação no/do Campo</h1>
-      <p>Resistência e enfrentamento das desigualdades</p>
-    </section>
+      <!-- Slide 1 -->
+      <section>
+        <h1>Educação no/do Campo</h1>
+        <p>Resistência e enfrentamento das desigualdades</p>
+      </section>
 
-    <section class="slide">
-      <h2>Educação do Campo</h2>
-      <p>Direito, identidade e luta social</p>
-    </section>
+      <!-- Vittor 2–5 -->
+      <section>
+        <section><h2>Educação do Campo</h2><p>Vittor</p></section>
+        <section><p>Slide 3</p></section>
+        <section><p>Slide 4</p></section>
+        <section><p>Slide 5</p></section>
+      </section>
 
-    <section class="slide">
-      <h2>Educação como resistência</h2>
-      <p>Saber, território e emancipação</p>
-    </section>
+      <!-- Warlas 6–7 -->
+      <section>
+        <section><h2>Educação e Desigualdade</h2><p>Warlas</p></section>
+        <section><p>Slide 7</p></section>
+      </section>
 
+      <!-- Iasmim 8–10 -->
+      <section>
+        <section><h2>Resistência no Campo</h2><p>Iasmim</p></section>
+        <section><p>Slide 9</p></section>
+        <section><p>Slide 10</p></section>
+      </section>
+
+      <!-- Will 11–13 -->
+      <section>
+        <section><h2>Políticas Educacionais</h2><p>Will</p></section>
+        <section><p>Slide 12</p></section>
+        <section><p>Slide 13</p></section>
+      </section>
+
+      <!-- Thallys 14–16 -->
+      <section>
+        <section><h2>Escola do Campo</h2><p>Thallys Gabriel</p></section>
+        <section><p>Slide 15</p></section>
+        <section><p>Slide 16</p></section>
+      </section>
+
+      <!-- Pedro 17–20 -->
+      <section>
+        <section><h2>Desafios Atuais</h2><p>Pedro</p></section>
+        <section><p>Slide 18</p></section>
+        <section><p>Slide 19</p></section>
+        <section><p>Slide 20</p></section>
+      </section>
+
+      <!-- Luís -->
+      <section>
+        <h2>Considerações Finais</h2>
+        <p>Luís</p>
+      </section>
+
+    </div>
   </div>
 
   <script>
-    const slides = document.querySelectorAll('.slide');
-    let index = 0;
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') {
-        slides[index].classList.remove('active');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('active');
-      }
-
-      if (e.key === 'ArrowLeft') {
-        slides[index].classList.remove('active');
-        index = (index - 1 + slides.length) % slides.length;
-        slides[index].classList.add('active');
-      }
+    Reveal.initialize({
+      transition: 'fade',
+      backgroundTransition: 'zoom'
     });
   </script>
 </body>
