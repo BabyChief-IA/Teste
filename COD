@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Educação no/do Campo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0b1020;
+      color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 2100vw;
+      height: 100vh;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: radial-gradient(circle at top, #1a2340, #0b1020);
+      transform-style: preserve-3d;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 900px;
+      line-height: 1.6;
+    }
+
+    .autor {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+      opacity: 0.07;
+      background-size: cover;
+      background-position: center;
+      transform: translateZ(-1px) scale(2);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="slides" id="slides">
+
+  <!-- SLIDE 1 -->
+  <section class="slide">
+    <h1>Educação no/do Campo</h1>
+    <p>Resistência e enfrentamento das desigualdades</p>
+    <div class="autor">Sociologia da Educação</div>
+  </section>
+
+  <!-- SLIDES 2–5 -->
+  <section class="slide"><h2>Slide 2</h2><p>Conteúdo do PDF</p><div class="autor">Vittor</div></section>
+  <section class="slide"><h2>Slide 3</h2><p>Conteúdo do PDF</p><div class="autor">Vittor</div></section>
+  <section class="slide"><h2>Slide 4</h2><p>Conteúdo do PDF</p><div class="autor">Vittor</div></section>
+  <section class="slide"><h2>Slide 5</h2><p>Conteúdo do PDF</p><div class="autor">Vittor</div></section>
+
+  <!-- SLIDES 6–7 -->
+  <section class="slide"><h2>Slide 6</h2><p>Conteúdo do PDF</p><div class="autor">Warlas</div></section>
+  <section class="slide"><h2>Slide 7</h2><p>Conteúdo do PDF</p><div class="autor">Warlas</div></section>
+
+  <!-- SLIDES 8–10 -->
+  <section class="slide"><h2>Slide 8</h2><p>Conteúdo do PDF</p><div class="autor">Iasmim</div></section>
+  <section class="slide"><h2>Slide 9</h2><p>Conteúdo do PDF</p><div class="autor">Iasmim</div></section>
+  <section class="slide"><h2>Slide 10</h2><p>Conteúdo do PDF</p><div class="autor">Iasmim</div></section>
+
+  <!-- SLIDES 11–13 -->
+  <section class="slide"><h2>Slide 11</h2><p>Conteúdo do PDF</p><div class="autor">Will</div></section>
+  <section class="slide"><h2>Slide 12</h2><p>Conteúdo do PDF</p><div class="autor">Will</div></section>
+  <section class="slide"><h2>Slide 13</h2><p>Conteúdo do PDF</p><div class="autor">Will</div></section>
+
+  <!-- SLIDES 14–16 -->
+  <section class="slide"><h2>Slide 14</h2><p>Conteúdo do PDF</p><div class="autor">Thallys Gabriel</div></section>
+  <section class="slide"><h2>Slide 15</h2><p>Conteúdo do PDF</p><div class="autor">Thallys Gabriel</div></section>
+  <section class="slide"><h2>Slide 16</h2><p>Conteúdo do PDF</p><div class="autor">Thallys Gabriel</div></section>
+
+  <!-- SLIDES 17–20 -->
+  <section class="slide"><h2>Slide 17</h2><p>Conteúdo do PDF</p><div class="autor">Pedro</div></section>
+  <section class="slide"><h2>Slide 18</h2><p>Conteúdo do PDF</p><div class="autor">Pedro</div></section>
+  <section class="slide"><h2>Slide 19</h2><p>Conteúdo do PDF</p><div class="autor">Pedro</div></section>
+  <section class="slide"><h2>Slide 20</h2><p>Conteúdo do PDF</p><div class="autor">Pedro</div></section>
+
+  <!-- FINAL -->
+  <section class="slide">
+    <h2>Considerações Finais</h2>
+    <p>Educação do campo como prática de resistência social, cultural e política.</p>
+    <div class="autor">Luis</div>
+  </section>
+
+</div>
+
+<script>
+  let index = 0;
+  const slides = document.getElementById("slides");
+
+  window.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") index++;
+    if (e.key === "ArrowLeft") index--;
+    index = Math.max(0, Math.min(index, 20));
+    slides.style.transform = `translateX(-${index * 100}vw)`;
+  });
+</script>
+
+</body>
+</html>
